@@ -1,12 +1,15 @@
 import { Octokit, RestEndpointMethodTypes } from "@octokit/rest";
 import dotenv from "dotenv";
 import { FRAMEWORK_DEFINITIONS, IGNORE_PATH, WEB_LANGUAGES } from "./config";
+import fs from "fs";
 
 dotenv.config();
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const GITHUB_USERNAME = process.env.GITHUB_USERNAME;
 const octokit = new Octokit({ auth: GITHUB_TOKEN });
+const RESULT_FILE = "result.json";
+const LOG_FILE = "scan.log";
 
 type FrameworkName = (typeof FRAMEWORK_DEFINITIONS)[number]["id"];
 
@@ -15,6 +18,13 @@ type Result = {
   frameworks: FrameworkName[];
   url: string;
 };
+
+// ログ出力
+const logStream = fs.createWriteStream(LOG_FILE, { flags: "w" });
+function writeLog(message: string) {
+  const ts = new Date().toISOString();
+  logStream.write(`${ts} : ${message}\n`);
+}
 
 // package.jsonファイルからdependenciesを取得し,フレームワーク情報を取得
 async function analyzePackageJson(owner: string, repo: string, path: string) {
@@ -87,7 +97,7 @@ async function main() {
   );
   const repo_count = targetRepos.length;
 
-  console.log(`Total repos: ${repo_count}.`);
+  writeLog(`Total repos: ${repo_count}.`);
 
   const results: Result[] = [];
   let count = 0;
@@ -108,8 +118,8 @@ async function main() {
     );
     // Web系のない場合はSkip
     if (!hasWebLang) {
-      process.stdout.write(`${prefix} : SKIP (Reason: No web languages.)`);
-      process.stdout.write(`Found: ${Object.keys(langs).join(",")}`);
+      writeLog(`${prefix} : SKIP (Reason: No web languages.)`);
+      writeLog(`Found: ${Object.keys(langs).join(",")}`);
       continue;
     }
 
@@ -121,15 +131,16 @@ async function main() {
 
     // フレームワークが見つかった場合
     if (frameworks.length > 0) {
-      process.stdout.write(`${prefix}: FOUND [${frameworks.join(",")}]`);
+      writeLog(`${prefix}: FOUND [${frameworks.join(",")}]`);
       results.push({ repoName: repo.name, frameworks, url: repo.html_url });
     } else {
-      process.stdout.write(
-        `${prefix}: No target frameworks found in package.json`,
-      );
+      writeLog(`${prefix}: No target frameworks found in package.json`);
     }
     await new Promise((r) => setTimeout(r, 200));
   }
+
+  fs.writeFileSync(RESULT_FILE, JSON.stringify(results, null, 2));
+  writeLog(`output : ${RESULT_FILE}`);
 }
 
-main();
+main().catch(console.error);
