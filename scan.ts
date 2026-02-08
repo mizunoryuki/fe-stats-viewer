@@ -8,6 +8,14 @@ const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const GITHUB_USERNAME = process.env.GITHUB_USERNAME;
 const octokit = new Octokit({ auth: GITHUB_TOKEN });
 
+type FrameworkName = (typeof FRAMEWORK_DEFINITIONS)[number]["id"];
+
+type Result = {
+  repoName: string;
+  frameworks: FrameworkName[];
+  url: string;
+};
+
 // package.jsonファイルからdependenciesを取得し,フレームワーク情報を取得
 async function analyzePackageJson(owner: string, repo: string, path: string) {
   try {
@@ -36,8 +44,8 @@ async function deepScanRepo(
   owner: string,
   repo: string,
   path: string = "",
-): Promise<string[]> {
-  let detected: string[] = [];
+): Promise<FrameworkName[]> {
+  let detected: FrameworkName[] = [];
   try {
     const { data } = await octokit.rest.repos.getContent({ owner, repo, path });
     if (Array.isArray(data)) {
@@ -81,7 +89,7 @@ async function main() {
 
   console.log(`Total repos: ${repo_count}.`);
 
-  const results = [];
+  const results: Result[] = [];
   let count = 0;
   // リポジトリにフロントエンドの言語があるかどうか確認
   for (const repo of targetRepos) {
@@ -106,8 +114,21 @@ async function main() {
     }
 
     // リポジトリの深層スキャン
-    const frameworks = await deepScanRepo(repo.owner.login, repo.name);
-	await new Promise(r => setTimeout(r, 200));
+    const frameworks: FrameworkName[] = await deepScanRepo(
+      repo.owner.login,
+      repo.name,
+    );
+
+    // フレームワークが見つかった場合
+    if (frameworks.length > 0) {
+      process.stdout.write(`${prefix}: FOUND [${frameworks.join(",")}]`);
+      results.push({ repoName: repo.name, frameworks, url: repo.html_url });
+    } else {
+      process.stdout.write(
+        `${prefix}: No target frameworks found in package.json`,
+      );
+    }
+    await new Promise((r) => setTimeout(r, 200));
   }
 }
 

@@ -29,4 +29,4 @@ export const FRAMEWORK_DEFINITIONS = [
 	{ id: "solid",  packages: ["solid-js", "solid-start"] },
 	{ id: "htmx",   packages: ["htmx.org", "htmx"] },
 	{ id: "alpine", packages: ["alpinejs", "alpine"] },
-  ];
+  ] as const;
