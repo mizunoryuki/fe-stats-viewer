@@ -1,12 +1,61 @@
 import { Octokit, RestEndpointMethodTypes } from "@octokit/rest";
 import dotenv from "dotenv";
-import { WEB_LANGUAGES } from "./config";
+import { FRAMEWORK_DEFINITIONS, IGNORE_PATH, WEB_LANGUAGES } from "./config";
 
 dotenv.config();
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const GITHUB_USERNAME = process.env.GITHUB_USERNAME;
 const octokit = new Octokit({ auth: GITHUB_TOKEN });
+
+// package.jsonファイルからdependenciesを取得し,フレームワーク情報を取得
+async function analyzePackageJson(owner: string, repo: string, path: string) {
+  try {
+    const { data } = await octokit.rest.repos.getContent({ owner, repo, path });
+    if ("content" in data && !Array.isArray(data)) {
+      const content = Buffer.from(data.content, "base64").toString("utf-8");
+      const pkg = JSON.parse(content);
+      const allDeps = {
+        ...(pkg.dependencies || {}),
+        ...(pkg.devDependencies || {}),
+      };
+      const depNames = Object.keys(allDeps);
+
+      return FRAMEWORK_DEFINITIONS.filter((fw) =>
+        fw.packages.some((p) => depNames.includes(p)),
+      ).map((fw) => fw.id);
+    }
+  } catch (e) {
+    return [];
+  }
+  return [];
+}
+
+// リポジトリの全てのファイルを捜索
+async function deepScanRepo(
+  owner: string,
+  repo: string,
+  path: string = "",
+): Promise<string[]> {
+  let detected: string[] = [];
+  try {
+    const { data } = await octokit.rest.repos.getContent({ owner, repo, path });
+    if (Array.isArray(data)) {
+      for (const file of data) {
+        if (file.type === "dir") {
+          if (IGNORE_PATH.includes(file.name)) continue;
+          const sub = await deepScanRepo(owner, repo, file.path);
+          detected = [...new Set([...detected, ...sub])];
+        } else if (file.name === "package.json") {
+          const found = await analyzePackageJson(owner, repo, file.path);
+          detected = [...new Set([...detected, ...found])];
+        }
+      }
+    }
+  } catch (e) {}
+
+  return detected;
+}
 
 async function main() {
   // リポジトリ一覧取得
@@ -28,10 +77,11 @@ async function main() {
   const targetRepos = allRepos.filter(
     (repo) => repo.owner.login === GITHUB_USERNAME && !repo.fork,
   );
-  console.log(`Total repos: ${targetRepos}.`);
+  const repo_count = targetRepos.length;
+
+  console.log(`Total repos: ${repo_count}.`);
 
   const results = [];
-  const repo_count = targetRepos.length;
   let count = 0;
   // リポジトリにフロントエンドの言語があるかどうか確認
   for (const repo of targetRepos) {
@@ -48,12 +98,16 @@ async function main() {
     const hasWebLang: boolean = Object.keys(langs).some((l) =>
       WEB_LANGUAGES.includes(l),
     );
-	// Web系のない場合はSkip
+    // Web系のない場合はSkip
     if (!hasWebLang) {
       process.stdout.write(`${prefix} : SKIP (Reason: No web languages.)`);
       process.stdout.write(`Found: ${Object.keys(langs).join(",")}`);
-	  continue
+      continue;
     }
+
+    // リポジトリの深層スキャン
+    const frameworks = await deepScanRepo(repo.owner.login, repo.name);
+	await new Promise(r => setTimeout(r, 200));
   }
 }
 
