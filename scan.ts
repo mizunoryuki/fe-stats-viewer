@@ -39,11 +39,28 @@ async function analyzePackageJson(owner: string, repo: string, path: string) {
       };
       const depNames = Object.keys(allDeps);
 
-      return FRAMEWORK_DEFINITIONS.filter((fw) =>
+      // フレームワークをdependenciesから検出
+      let foundIds = FRAMEWORK_DEFINITIONS.filter((fw) =>
         fw.packages.some((p) => depNames.includes(p)),
       ).map((fw) => fw.id);
+
+      // 重複を除外
+      // nextがあるなら reactを除外
+      if (foundIds.includes("next")) {
+        foundIds = foundIds.filter((id) => id !== "react");
+      }
+
+      // nuxtがあるならvueを除外
+      if (foundIds.includes("nuxt")) {
+        foundIds = foundIds.filter((id) => id !== "vue");
+      }
+
+      return foundIds;
     }
   } catch (e) {
+    if (e instanceof Error) {
+      writeLog(e.message);
+    }
     return [];
   }
   return [];
@@ -98,6 +115,7 @@ async function main() {
   const repo_count = targetRepos.length;
 
   writeLog(`Total repos: ${repo_count}.`);
+  process.stdout.write(`Total repos: ${repo_count}\n`);
 
   const results: Result[] = [];
   let count = 0;
@@ -105,7 +123,7 @@ async function main() {
   for (const repo of targetRepos) {
     count++;
     const prefix = `[${count}/${repo_count}] ${repo.name}`;
-    process.stdout.write(`\r${prefix}`);
+    process.stdout.write(`\r${prefix}\n`);
 
     const { data: langs } = await octokit.rest.repos.listLanguages({
       owner: repo.owner.login,

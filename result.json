@@ -2,7 +2,6 @@
   {
     "repoName": "dict-share",
     "frameworks": [
-      "react",
       "next"
     ],
     "url": "https://github.com/mizunoryuki/dict-share"
@@ -10,7 +9,6 @@
   {
     "repoName": "dynamicrouting",
     "frameworks": [
-      "react",
       "next"
     ],
     "url": "https://github.com/mizunoryuki/dynamicrouting"
@@ -26,7 +24,6 @@
   {
     "repoName": "github-auth",
     "frameworks": [
-      "react",
       "next"
     ],
     "url": "https://github.com/mizunoryuki/github-auth"
@@ -84,7 +81,6 @@
   {
     "repoName": "portfoliov2",
     "frameworks": [
-      "react",
       "next"
     ],
     "url": "https://github.com/mizunoryuki/portfoliov2"
@@ -107,7 +103,6 @@
   {
     "repoName": "reservation-manager",
     "frameworks": [
-      "react",
       "next"
     ],
     "url": "https://github.com/mizunoryuki/reservation-manager"
