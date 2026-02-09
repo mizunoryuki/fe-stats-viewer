@@ -2,7 +2,7 @@ import fs from "fs";
 import { Result } from "./scan";
 
 const RESULT_FILE = "result.json";
-const OUTPUT_FILE = "tech-viewer.svg";
+const OUTPUT_FILE = "stats-chart.svg";
 
 const COLORS: Record<string, string> = {
   next: "#ffffff",
