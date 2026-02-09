@@ -11,9 +11,9 @@ const octokit = new Octokit({ auth: GITHUB_TOKEN });
 const RESULT_FILE = "result.json";
 const LOG_FILE = "scan.log";
 
-type FrameworkName = (typeof FRAMEWORK_DEFINITIONS)[number]["id"];
+export type FrameworkName = (typeof FRAMEWORK_DEFINITIONS)[number]["id"];
 
-type Result = {
+export type Result = {
   repoName: string;
   frameworks: FrameworkName[];
   url: string;
