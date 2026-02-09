@@ -24,7 +24,7 @@ jobs:
 
       - name: Run Scan and Generate
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # 自動生成されるトークンを使用
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_USERNAME: ${{ github.repository_owner }}
         run: |
           npx tsx scan.ts
