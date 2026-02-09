@@ -20,7 +20,7 @@ const COLORS: Record<string, string> = {
 const DEFAULT_COLOR = "#888888";
 
 const CONFIG = {
-  width: 1000,
+  width: 800,
   bg: "#0d1117",
   textColor: "#ffffff",
   fontSans:
@@ -83,13 +83,13 @@ async function generate() {
 
   if (stats.length === 0) return;
 
-  const padding = 40;
-  const barHeight = 26;
-  const barGap = 22;
+  const padding = 30;
+  const barHeight = 23;
+  const barGap = 18;
   const rowHeight = barHeight + barGap;
   const legendItemHeight = 32;
-  const pieRadius = 120;
-  const holeRadius = 75;
+  const pieRadius = 100;
+  const holeRadius = 65;
   const totalLegendHeight = stats.length * legendItemHeight;
   const totalBarHeight = stats.length * rowHeight - barGap;
   const contentHeight = Math.max(totalBarHeight, pieRadius * 2, 300);
@@ -97,10 +97,10 @@ async function generate() {
   const svgHeight = headerSpace + contentHeight + 50;
   const drawingAreaCenterY = headerSpace + contentHeight / 2;
 
-  const labelAreaWidth = 140;
-  const maxBarPx = 230;
-  const pieCenterX = 610;
-  const legendX = 790;
+  const labelAreaWidth = 120;
+  const maxBarPx = 180;
+  const pieCenterX = 480;
+  const legendX = 600;
 
   let currentBarY = drawingAreaCenterY - totalBarHeight / 2;
   const pieCenterY = drawingAreaCenterY;
@@ -128,7 +128,7 @@ async function generate() {
   <rect width="100%" height="100%" fill="${CONFIG.bg}" rx="16" />
   
   <text x="${padding}" y="55" class="title">TECH STACK OVERVIEW</text>
-  <text x="${CONFIG.width - 150}" y="${svgHeight - padding}" class="author">MIZUNORYUKI</text>
+  <text x="${CONFIG.width - 100}" y="${svgHeight - padding}" class="author">MIZUNORYUKI</text>
 `;
 
   // 左側：棒グラフ
