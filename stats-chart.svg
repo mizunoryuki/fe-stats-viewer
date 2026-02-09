@@ -1,69 +1,66 @@
 <svg width="1000" height="450" viewBox="0 0 1000 450" xmlns="http://www.w3.org/2000/svg">
   <style>
-  @import url('https://fonts.googleapis.com/css2?family=Bungee&amp;family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@700&amp;display=swap');
-	
-	text { fill: #ffffff; }
+  text { fill: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
 
-	.font-bungee { font-family: 'Bungee', cursive; }
-	.title { font-size: 26px; fill: #80FF00; }
-	.author { font-size: 10px; fill: #ffffff; }
-	.label { font-size: 14px; letter-spacing: 0.05em; fill: #ffffff; }
-	.legend-name { font-size: 14px; font-weight: normal; fill: #ffffff; }
-	
-	.font-data { font-family: 'JetBrains Mono', 'Inter', monospace; font-weight: 700; fill: #ffffff; }
-	.total-val { font-size: 44px; fill: #ffffff; }
-	.total-label { font-family: 'Inter', sans-serif; font-size: 12px; fill: #8b949e; letter-spacing: 0.1em; font-weight: 900;}
-	.count-badge { font-size: 16px; fill: #ffffff; }
-	.percent-val { font-size: 15px; fill: #ffffff; }
+  .title { font-family: Impact, 'Arial Black', sans-serif; font-size: 28px; fill: #80FF00; letter-spacing: 1px; }
+  .author { font-family: Impact, 'Arial Black', sans-serif; font-size: 12px; fill: #8b949e; letter-spacing: 1px; }
+  
+  .label { font-family: Impact, 'Arial Black', sans-serif; font-size: 14px; letter-spacing: 0.05em; fill: #ffffff; }
+  .legend-name { font-family: Impact, 'Arial Black', sans-serif; font-size: 14px; font-weight: normal; fill: #ffffff; letter-spacing: 0.5px; }
+  
+  .font-data { font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace; font-weight: 700; fill: #ffffff; }
+  .total-val { font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace; font-size: 44px; fill: #ffffff; }
+  .total-label { font-size: 12px; fill: #8b949e; letter-spacing: 0.1em; font-weight: 900;}
+  
+  .count-badge { font-size: 16px; fill: #ffffff; }
+  .percent-val { font-size: 15px; fill: #ffffff; }
 
-	.tooltip { cursor: pointer; }
-	.tooltip:hover { opacity: 0.8; }
+  .tooltip { cursor: pointer; }
   </style>
   <rect width="100%" height="100%" fill="#0d1117" rx="16" />
   
-  <text x="40" y="55" class="font-bungee title">TECH STACK OVERVIEW</text>
-  <text x="880" y="410" class="font-bungee author">mizunoryuki</text>
-
+  <text x="40" y="55" class="title">TECH STACK OVERVIEW</text>
+  <text x="850" y="410" class="author">MIZUNORYUKI</text>
 <g class="tooltip">
-	<title>react: 16</title>
-	<text x="40" y="160" class="font-bungee label">REACT</text>
-	<rect x="140" y="141" width="230" height="26" fill="#30363d" rx="4" />
-	<rect x="140" y="141" width="230" height="26" fill="#61DAFB" rx="4">
-	  <animate attributeName="width" from="0" to="230" dur="0.8s" fill="freeze" />
-	</rect>
-	<text x="382" y="160" class="font-data count-badge">16</text>
+  <title>react: 16</title>
+  <text x="40" y="160" class="label">REACT</text>
+  <rect x="140" y="141" width="230" height="26" fill="#30363d" rx="4" />
+  <rect x="140" y="141" width="230" height="26" fill="#61DAFB" rx="4">
+    <animate attributeName="width" from="0" to="230" dur="0.8s" fill="freeze" />
+  </rect>
+  <text x="382" y="160" class="font-data count-badge">16</text>
   </g><g class="tooltip">
-	<title>next: 5</title>
-	<text x="40" y="208" class="font-bungee label">NEXT</text>
-	<rect x="140" y="189" width="230" height="26" fill="#30363d" rx="4" />
-	<rect x="140" y="189" width="71.875" height="26" fill="#ffffff" rx="4">
-	  <animate attributeName="width" from="0" to="71.875" dur="0.8s" fill="freeze" />
-	</rect>
-	<text x="382" y="208" class="font-data count-badge">5</text>
+  <title>next: 5</title>
+  <text x="40" y="208" class="label">NEXT</text>
+  <rect x="140" y="189" width="230" height="26" fill="#30363d" rx="4" />
+  <rect x="140" y="189" width="71.875" height="26" fill="#ffffff" rx="4">
+    <animate attributeName="width" from="0" to="71.875" dur="0.8s" fill="freeze" />
+  </rect>
+  <text x="382" y="208" class="font-data count-badge">5</text>
   </g><g class="tooltip">
-	<title>hono: 3</title>
-	<text x="40" y="256" class="font-bungee label">HONO</text>
-	<rect x="140" y="237" width="230" height="26" fill="#30363d" rx="4" />
-	<rect x="140" y="237" width="43.125" height="26" fill="#E36002" rx="4">
-	  <animate attributeName="width" from="0" to="43.125" dur="0.8s" fill="freeze" />
-	</rect>
-	<text x="382" y="256" class="font-data count-badge">3</text>
+  <title>hono: 3</title>
+  <text x="40" y="256" class="label">HONO</text>
+  <rect x="140" y="237" width="230" height="26" fill="#30363d" rx="4" />
+  <rect x="140" y="237" width="43.125" height="26" fill="#E36002" rx="4">
+    <animate attributeName="width" from="0" to="43.125" dur="0.8s" fill="freeze" />
+  </rect>
+  <text x="382" y="256" class="font-data count-badge">3</text>
   </g><g class="tooltip">
-	<title>vue: 2</title>
-	<text x="40" y="304" class="font-bungee label">VUE</text>
-	<rect x="140" y="285" width="230" height="26" fill="#30363d" rx="4" />
-	<rect x="140" y="285" width="28.75" height="26" fill="#4FC08D" rx="4">
-	  <animate attributeName="width" from="0" to="28.75" dur="0.8s" fill="freeze" />
-	</rect>
-	<text x="382" y="304" class="font-data count-badge">2</text>
+  <title>vue: 2</title>
+  <text x="40" y="304" class="label">VUE</text>
+  <rect x="140" y="285" width="230" height="26" fill="#30363d" rx="4" />
+  <rect x="140" y="285" width="28.75" height="26" fill="#4FC08D" rx="4">
+    <animate attributeName="width" from="0" to="28.75" dur="0.8s" fill="freeze" />
+  </rect>
+  <text x="382" y="304" class="font-data count-badge">2</text>
   </g><g class="tooltip">
-	<title>nitro: 1</title>
-	<text x="40" y="352" class="font-bungee label">NITRO</text>
-	<rect x="140" y="333" width="230" height="26" fill="#30363d" rx="4" />
-	<rect x="140" y="333" width="14.375" height="26" fill="#F4D03F" rx="4">
-	  <animate attributeName="width" from="0" to="14.375" dur="0.8s" fill="freeze" />
-	</rect>
-	<text x="382" y="352" class="font-data count-badge">1</text>
+  <title>nitro: 1</title>
+  <text x="40" y="352" class="label">NITRO</text>
+  <rect x="140" y="333" width="230" height="26" fill="#30363d" rx="4" />
+  <rect x="140" y="333" width="14.375" height="26" fill="#F4D03F" rx="4">
+    <animate attributeName="width" from="0" to="14.375" dur="0.8s" fill="freeze" />
+  </rect>
+  <text x="382" y="352" class="font-data count-badge">1</text>
   </g><g class="tooltip">
       <circle cx="610" cy="250" r="97.5" fill="transparent" stroke="#61DAFB" stroke-width="45" stroke-dasharray="0 612.6105674500096" stroke-linecap="butt" transform="rotate(-90 610 250)">
         <animate attributeName="stroke-dasharray" from="0 612.6105674500096" to="361.0284844148205 612.6105674500096" dur="0.8s" fill="freeze" />
@@ -91,22 +88,22 @@
       </circle>
     </g><circle cx="610" cy="250" r="75" fill="#0d1117" /><text x="610" y="262" text-anchor="middle" class="font-data total-val">27</text><text x="610" y="288" text-anchor="middle" class="total-label">TOTAL USES</text><g>
       <rect x="790" y="170" width="16" height="16" fill="#61DAFB" rx="3" />
-      <text x="818" y="184" class="font-bungee legend-name">REACT</text>
+      <text x="818" y="184" class="legend-name">REACT</text>
       <text x="955" y="184" text-anchor="end" class="font-data percent-val">59%</text>
     </g><g>
       <rect x="790" y="202" width="16" height="16" fill="#ffffff" rx="3" />
-      <text x="818" y="216" class="font-bungee legend-name">NEXT</text>
+      <text x="818" y="216" class="legend-name">NEXT</text>
       <text x="955" y="216" text-anchor="end" class="font-data percent-val">19%</text>
     </g><g>
       <rect x="790" y="234" width="16" height="16" fill="#E36002" rx="3" />
-      <text x="818" y="248" class="font-bungee legend-name">HONO</text>
+      <text x="818" y="248" class="legend-name">HONO</text>
       <text x="955" y="248" text-anchor="end" class="font-data percent-val">11%</text>
     </g><g>
       <rect x="790" y="266" width="16" height="16" fill="#4FC08D" rx="3" />
-      <text x="818" y="280" class="font-bungee legend-name">VUE</text>
+      <text x="818" y="280" class="legend-name">VUE</text>
       <text x="955" y="280" text-anchor="end" class="font-data percent-val">7%</text>
     </g><g>
       <rect x="790" y="298" width="16" height="16" fill="#F4D03F" rx="3" />
-      <text x="818" y="312" class="font-bungee legend-name">NITRO</text>
+      <text x="818" y="312" class="legend-name">NITRO</text>
       <text x="955" y="312" text-anchor="end" class="font-data percent-val">4%</text>
     </g></svg>

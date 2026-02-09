@@ -23,9 +23,11 @@ const CONFIG = {
   width: 1000,
   bg: "#0d1117",
   textColor: "#ffffff",
-  fontSans: "'Inter', sans-serif",
-  fontBungee: "'Bungee', cursive",
-  fontNumber: "'JetBrains Mono', 'Inter', monospace",
+  fontSans:
+    "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif",
+  fontImpact: "Impact, 'Arial Black', sans-serif",
+  fontMono:
+    "ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace",
 };
 
 type ResultStats = {
@@ -61,7 +63,6 @@ async function generate() {
   const statsMap: Record<string, { count: number; repos: string[] }> = {};
   let totalCount = 0;
 
-  // プロジェクトから見つかったフレームワークを集計する(利用回数,利用しているリポジトリ)
   data.forEach((entry) => {
     entry.frameworks.forEach((framework: string) => {
       if (!statsMap[framework]) statsMap[framework] = { count: 0, repos: [] };
@@ -71,7 +72,6 @@ async function generate() {
     });
   });
 
-  // 色情報追加
   const stats: ResultStats[] = Object.entries(statsMap)
     .map(([name, val]) => ({
       name,
@@ -79,11 +79,10 @@ async function generate() {
       repos: val.repos,
       color: COLORS[name] || DEFAULT_COLOR,
     }))
-    .sort((a, b) => b.count - a.count); // 降順ソート
+    .sort((a, b) => b.count - a.count);
 
   if (stats.length === 0) return;
 
-  // svg作成
   const padding = 40;
   const barHeight = 26;
   const barGap = 22;
@@ -109,50 +108,46 @@ async function generate() {
 
   let svg = `<svg width="${CONFIG.width}" height="${svgHeight}" viewBox="0 0 ${CONFIG.width} ${svgHeight}" xmlns="http://www.w3.org/2000/svg">
   <style>
-  @import url('https://fonts.googleapis.com/css2?family=Bungee&amp;family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@700&amp;display=swap');
-	
-	text { fill: ${CONFIG.textColor}; }
+  text { fill: ${CONFIG.textColor}; font-family: ${CONFIG.fontSans}; }
 
-	.font-bungee { font-family: ${CONFIG.fontBungee}; }
-	.title { font-size: 26px; fill: #80FF00; }
-	.author { font-size: 10px; fill: #ffffff; }
-	.label { font-size: 14px; letter-spacing: 0.05em; fill: #ffffff; }
-	.legend-name { font-size: 14px; font-weight: normal; fill: #ffffff; }
-	
-	.font-data { font-family: ${CONFIG.fontNumber}; font-weight: 700; fill: #ffffff; }
-	.total-val { font-size: 44px; fill: #ffffff; }
-	.total-label { font-family: ${CONFIG.fontSans}; font-size: 12px; fill: #8b949e; letter-spacing: 0.1em; font-weight: 900;}
-	.count-badge { font-size: 16px; fill: #ffffff; }
-	.percent-val { font-size: 15px; fill: #ffffff; }
+  .title { font-family: ${CONFIG.fontImpact}; font-size: 28px; fill: #80FF00; letter-spacing: 1px; }
+  .author { font-family: ${CONFIG.fontImpact}; font-size: 12px; fill: #8b949e; letter-spacing: 1px; }
+  
+  .label { font-family: ${CONFIG.fontImpact}; font-size: 14px; letter-spacing: 0.05em; fill: #ffffff; }
+  .legend-name { font-family: ${CONFIG.fontImpact}; font-size: 14px; font-weight: normal; fill: #ffffff; letter-spacing: 0.5px; }
+  
+  .font-data { font-family: ${CONFIG.fontMono}; font-weight: 700; fill: #ffffff; }
+  .total-val { font-family: ${CONFIG.fontMono}; font-size: 44px; fill: #ffffff; }
+  .total-label { font-size: 12px; fill: #8b949e; letter-spacing: 0.1em; font-weight: 900;}
+  
+  .count-badge { font-size: 16px; fill: #ffffff; }
+  .percent-val { font-size: 15px; fill: #ffffff; }
 
-	.tooltip { cursor: pointer; }
-	.tooltip:hover { opacity: 0.8; }
+  .tooltip { cursor: pointer; }
   </style>
   <rect width="100%" height="100%" fill="${CONFIG.bg}" rx="16" />
   
-  <text x="${padding}" y="55" class="font-bungee title">TECH STACK OVERVIEW</text>
-  <text x="${CONFIG.width - 120}" y="${svgHeight - padding}" class="font-bungee author">mizunoryuki</text>
-
+  <text x="${padding}" y="55" class="title">TECH STACK OVERVIEW</text>
+  <text x="${CONFIG.width - 150}" y="${svgHeight - padding}" class="author">MIZUNORYUKI</text>
 `;
 
-  // 左側
+  // 左側：棒グラフ
   const maxVal = stats[0].count;
   stats.forEach((item) => {
     const barW = (item.count / maxVal) * maxBarPx;
     svg += `<g class="tooltip">
-	<title>${escapeXml(item.name)}: ${item.count}</title>
-	<text x="${padding}" y="${currentBarY + 19}" class="font-bungee label">${item.name.toUpperCase()}</text>
-	<rect x="${labelAreaWidth}" y="${currentBarY}" width="${maxBarPx}" height="${barHeight}" fill="#30363d" rx="4" />
-	<rect x="${labelAreaWidth}" y="${currentBarY}" width="${barW}" height="${barHeight}" fill="${item.color}" rx="4">
-	  <animate attributeName="width" from="0" to="${barW}" dur="0.8s" fill="freeze" />
-	</rect>
-	<text x="${labelAreaWidth + maxBarPx + 12}" y="${currentBarY + 19}" class="font-data count-badge">${item.count}</text>
+  <title>${escapeXml(item.name)}: ${item.count}</title>
+  <text x="${padding}" y="${currentBarY + 19}" class="label">${item.name.toUpperCase()}</text>
+  <rect x="${labelAreaWidth}" y="${currentBarY}" width="${maxBarPx}" height="${barHeight}" fill="#30363d" rx="4" />
+  <rect x="${labelAreaWidth}" y="${currentBarY}" width="${barW}" height="${barHeight}" fill="${item.color}" rx="4">
+    <animate attributeName="width" from="0" to="${barW}" dur="0.8s" fill="freeze" />
+  </rect>
+  <text x="${labelAreaWidth + maxBarPx + 12}" y="${currentBarY + 19}" class="font-data count-badge">${item.count}</text>
   </g>`;
     currentBarY += rowHeight;
   });
 
-  // 右側
-  // 円グラフ
+  // 中央：円グラフ
   const ringRadius = (pieRadius + holeRadius) / 2;
   const strokeWidth = pieRadius - holeRadius;
   const circumference = 2 * Math.PI * ringRadius;
@@ -178,12 +173,12 @@ async function generate() {
   svg += `<text x="${pieCenterX}" y="${pieCenterY + 12}" text-anchor="middle" class="font-data total-val">${totalCount}</text>`;
   svg += `<text x="${pieCenterX}" y="${pieCenterY + 38}" text-anchor="middle" class="total-label">TOTAL USES</text>`;
 
-  // 凡例
+  // 右側：凡例
   stats.forEach((item) => {
     const percentage = Math.round((item.count / totalCount) * 100);
     svg += `<g>
       <rect x="${legendX}" y="${currentLegendY}" width="16" height="16" fill="${item.color}" rx="3" />
-      <text x="${legendX + 28}" y="${currentLegendY + 14}" class="font-bungee legend-name">${item.name.toUpperCase()}</text>
+      <text x="${legendX + 28}" y="${currentLegendY + 14}" class="legend-name">${item.name.toUpperCase()}</text>
       <text x="${legendX + 165}" y="${currentLegendY + 14}" text-anchor="end" class="font-data percent-val">${percentage}%</text>
     </g>`;
     currentLegendY += legendItemHeight;
