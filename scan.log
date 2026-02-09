@@ -1,53 +1,52 @@
-2026-02-08T23:52:55.353Z : Total repos: 40.
-2026-02-08T23:52:55.931Z : [1/40] CountMoji_chrome_extension: No target frameworks found in package.json
-2026-02-08T23:53:05.674Z : [2/40] dict-share: FOUND [next]
-2026-02-08T23:53:07.751Z : [3/40] dynamicrouting: FOUND [next]
-2026-02-08T23:53:14.221Z : [4/40] fake-quotes: FOUND [react,hono]
-2026-02-08T23:53:14.689Z : [5/40] fe-stats-viewer : SKIP (Reason: No web languages.)
-2026-02-08T23:53:14.690Z : Found: 
-2026-02-08T23:53:19.314Z : [6/40] github-auth: FOUND [next]
-2026-02-08T23:53:20.132Z : [7/40] gitTest: No target frameworks found in package.json
-2026-02-08T23:53:20.620Z : [8/40] glumon : SKIP (Reason: No web languages.)
-2026-02-08T23:53:20.620Z : Found: 
-2026-02-08T23:53:33.332Z : [9/40] hello_app: No target frameworks found in package.json
-2026-02-08T23:53:33.793Z : [10/40] homebrew-tools : SKIP (Reason: No web languages.)
-2026-02-08T23:53:33.793Z : Found: Ruby
-2026-02-08T23:53:35.514Z : [11/40] hxh-title-image-generator: FOUND [react]
-2026-02-08T23:53:46.279Z : [12/40] jsonic: FOUND [hono,react]
-2026-02-08T23:53:46.760Z : [13/40] kenkyu-test-prog : SKIP (Reason: No web languages.)
-2026-02-08T23:53:46.760Z : Found: Python
-2026-02-08T23:53:48.150Z : [14/40] login-github-acount: FOUND [react]
-2026-02-08T23:53:50.362Z : [15/40] login-with-mail: FOUND [vue]
-2026-02-08T23:53:52.213Z : [16/40] messageBoard: FOUND [react]
-2026-02-08T23:53:52.675Z : [17/40] mizunoryuki : SKIP (Reason: No web languages.)
-2026-02-08T23:53:52.675Z : Found: 
-2026-02-08T23:53:53.008Z : [18/40] my-first-homebrew-tools : SKIP (Reason: No web languages.)
-2026-02-08T23:53:53.008Z : Found: Go
-2026-02-08T23:53:53.281Z : [19/40] obsidian-vault : SKIP (Reason: No web languages.)
-2026-02-08T23:53:53.281Z : Found: 
-2026-02-08T23:53:56.242Z : [20/40] one-phrase-log: FOUND [react]
-2026-02-08T23:53:56.798Z : [21/40] oop2-test : SKIP (Reason: No web languages.)
-2026-02-08T23:53:56.798Z : Found: Python
-2026-02-08T23:53:57.103Z : [22/40] PDR-yokoaruki : SKIP (Reason: No web languages.)
-2026-02-08T23:53:57.103Z : Found: Jupyter Notebook
-2026-02-08T23:53:58.964Z : [23/40] portfolio: FOUND [react]
-2026-02-08T23:54:13.304Z : [24/40] portfoliov2: FOUND [next]
-2026-02-08T23:54:15.166Z : [25/40] PxtoRem: FOUND [react]
-2026-02-08T23:54:26.049Z : [26/40] react-plus-nitro: FOUND [nitro,react]
-2026-02-08T23:54:34.506Z : [27/40] reservation-manager: FOUND [next]
-2026-02-08T23:54:34.980Z : [28/40] reservation-manager-back : SKIP (Reason: No web languages.)
-2026-02-08T23:54:34.980Z : Found: Go,Dockerfile
-2026-02-08T23:54:46.721Z : [29/40] ruby-todo: No target frameworks found in package.json
-2026-02-08T23:55:00.160Z : [30/40] sample_app: No target frameworks found in package.json
-2026-02-08T23:55:02.538Z : [31/40] screen-recorder: FOUND [react]
-2026-02-08T23:55:10.771Z : [32/40] syshack_2025spring: FOUND [react]
-2026-02-08T23:55:12.817Z : [33/40] test-HaertLink-react: FOUND [react]
-2026-02-08T23:55:13.299Z : [34/40] test-repo : SKIP (Reason: No web languages.)
-2026-02-08T23:55:13.299Z : Found: 
-2026-02-08T23:55:18.401Z : [35/40] TodoWithTest: FOUND [hono,react]
-2026-02-08T23:55:20.098Z : [36/40] tone-js-tutorial: FOUND [react]
-2026-02-08T23:55:22.965Z : [37/40] tonejs-tutorial: FOUND [react]
-2026-02-08T23:55:36.200Z : [38/40] toy_app: No target frameworks found in package.json
-2026-02-08T23:55:38.827Z : [39/40] type-game: FOUND [react]
-2026-02-08T23:55:40.942Z : [40/40] vue-todo: FOUND [vue]
-2026-02-08T23:55:41.147Z : output : result.json
+2026-02-09T09:32:23.196Z : Total repos: 40.
+2026-02-09T09:32:23.427Z : [1/40] CountMoji_chrome_extension: No target frameworks found in package.json
+2026-02-09T09:32:26.270Z : [2/40] dict-share: FOUND [next]
+2026-02-09T09:32:27.061Z : [3/40] dynamicrouting: FOUND [next]
+2026-02-09T09:32:28.777Z : [4/40] fake-quotes: FOUND [react,hono]
+2026-02-09T09:32:29.406Z : [5/40] fe-stats-viewer: No target frameworks found in package.json
+2026-02-09T09:32:31.165Z : [6/40] github-auth: FOUND [next]
+2026-02-09T09:32:31.536Z : [7/40] gitTest: No target frameworks found in package.json
+2026-02-09T09:32:31.849Z : [8/40] glumon : SKIP (Reason: No web languages.)
+2026-02-09T09:32:31.849Z : Found: 
+2026-02-09T09:32:35.724Z : [9/40] hello_app: No target frameworks found in package.json
+2026-02-09T09:32:36.044Z : [10/40] homebrew-tools : SKIP (Reason: No web languages.)
+2026-02-09T09:32:36.044Z : Found: Ruby
+2026-02-09T09:32:36.660Z : [11/40] hxh-title-image-generator: FOUND [react]
+2026-02-09T09:32:39.971Z : [12/40] jsonic: FOUND [hono,react]
+2026-02-09T09:32:40.273Z : [13/40] kenkyu-test-prog : SKIP (Reason: No web languages.)
+2026-02-09T09:32:40.273Z : Found: Python
+2026-02-09T09:32:40.853Z : [14/40] login-github-acount: FOUND [react]
+2026-02-09T09:32:41.828Z : [15/40] login-with-mail: FOUND [vue]
+2026-02-09T09:32:42.548Z : [16/40] messageBoard: FOUND [react]
+2026-02-09T09:32:42.854Z : [17/40] mizunoryuki : SKIP (Reason: No web languages.)
+2026-02-09T09:32:42.854Z : Found: 
+2026-02-09T09:32:42.945Z : [18/40] my-first-homebrew-tools : SKIP (Reason: No web languages.)
+2026-02-09T09:32:42.945Z : Found: Go
+2026-02-09T09:32:43.063Z : [19/40] obsidian-vault : SKIP (Reason: No web languages.)
+2026-02-09T09:32:43.063Z : Found: 
+2026-02-09T09:32:44.093Z : [20/40] one-phrase-log: FOUND [react]
+2026-02-09T09:32:44.401Z : [21/40] oop2-test : SKIP (Reason: No web languages.)
+2026-02-09T09:32:44.401Z : Found: Python
+2026-02-09T09:32:44.506Z : [22/40] PDR-yokoaruki : SKIP (Reason: No web languages.)
+2026-02-09T09:32:44.506Z : Found: Jupyter Notebook
+2026-02-09T09:32:45.216Z : [23/40] portfolio: FOUND [react]
+2026-02-09T09:32:49.472Z : [24/40] portfoliov2: FOUND [next]
+2026-02-09T09:32:50.210Z : [25/40] PxtoRem: FOUND [react]
+2026-02-09T09:32:53.899Z : [26/40] react-plus-nitro: FOUND [nitro,react]
+2026-02-09T09:32:56.805Z : [27/40] reservation-manager: FOUND [next]
+2026-02-09T09:32:57.097Z : [28/40] reservation-manager-back : SKIP (Reason: No web languages.)
+2026-02-09T09:32:57.097Z : Found: Go,Dockerfile
+2026-02-09T09:33:01.116Z : [29/40] ruby-todo: No target frameworks found in package.json
+2026-02-09T09:33:05.504Z : [30/40] sample_app: No target frameworks found in package.json
+2026-02-09T09:33:06.372Z : [31/40] screen-recorder: FOUND [react]
+2026-02-09T09:33:08.973Z : [32/40] syshack_2025spring: FOUND [react]
+2026-02-09T09:33:09.736Z : [33/40] test-HaertLink-react: FOUND [react]
+2026-02-09T09:33:10.073Z : [34/40] test-repo : SKIP (Reason: No web languages.)
+2026-02-09T09:33:10.073Z : Found: 
+2026-02-09T09:33:11.672Z : [35/40] TodoWithTest: FOUND [hono,react]
+2026-02-09T09:33:12.446Z : [36/40] tone-js-tutorial: FOUND [react]
+2026-02-09T09:33:13.597Z : [37/40] tonejs-tutorial: FOUND [react]
+2026-02-09T09:33:18.249Z : [38/40] toy_app: No target frameworks found in package.json
+2026-02-09T09:33:19.155Z : [39/40] type-game: FOUND [react]
+2026-02-09T09:33:20.026Z : [40/40] vue-todo: FOUND [vue]
+2026-02-09T09:33:20.227Z : output : result.json
