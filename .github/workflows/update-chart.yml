@@ -24,7 +24,7 @@ jobs:
 
       - name: Run Scan and Generate
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
           GITHUB_USERNAME: ${{ github.repository_owner }}
         run: |
           npx tsx scan.ts
@@ -34,6 +34,6 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add stats.svg result.json scan.log
+          git add stats-chart.svg result.json scan.log
           git commit -m "docs: update stats chart [skip ci]" || echo "No changes to commit"
           git push
