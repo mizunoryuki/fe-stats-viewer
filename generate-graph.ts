@@ -114,7 +114,8 @@ async function generate() {
 	text { fill: ${CONFIG.textColor}; }
 
 	.font-bungee { font-family: ${CONFIG.fontBungee}; }
-	.title { font-size: 26px; fill: #58a6ff; }
+	.title { font-size: 26px; fill: #80FF00; }
+	.author { font-size: 10px; fill: #ffffff; }
 	.label { font-size: 14px; letter-spacing: 0.05em; fill: #ffffff; }
 	.legend-name { font-size: 14px; font-weight: normal; fill: #ffffff; }
 	
@@ -130,6 +131,8 @@ async function generate() {
   <rect width="100%" height="100%" fill="${CONFIG.bg}" rx="16" />
   
   <text x="${padding}" y="55" class="font-bungee title">TECH STACK OVERVIEW</text>
+  <text x="${CONFIG.width - 120}" y="${svgHeight - padding}" class="font-bungee author">mizunoryuki</text>
+
 `;
 
   // 左側
@@ -147,8 +150,48 @@ async function generate() {
   </g>`;
     currentBarY += rowHeight;
   });
+
+  // 右側
+  // 円グラフ
+  const ringRadius = (pieRadius + holeRadius) / 2;
+  const strokeWidth = pieRadius - holeRadius;
+  const circumference = 2 * Math.PI * ringRadius;
+  const gapPx = 2;
+  const gapLength = (gapPx / (2 * Math.PI * ringRadius)) * circumference;
+  let accumulatedPercent = 0;
+
+  stats.forEach((item) => {
+    const pct = item.count / totalCount;
+    const dashLength = Math.max(0, pct * circumference - gapLength);
+    const offset = -accumulatedPercent * circumference;
+
+    svg += `<g class="tooltip">
+      <circle cx="${pieCenterX}" cy="${pieCenterY}" r="${ringRadius}" fill="transparent" stroke="${item.color}" stroke-width="${strokeWidth}" stroke-dasharray="0 ${circumference}" stroke-linecap="butt" transform="rotate(-90 ${pieCenterX} ${pieCenterY})">
+        <animate attributeName="stroke-dasharray" from="0 ${circumference}" to="${dashLength} ${circumference}" dur="0.8s" fill="freeze" />
+        <animate attributeName="stroke-dashoffset" from="0" to="${offset}" dur="0.8s" fill="freeze" />
+      </circle>
+    </g>`;
+    accumulatedPercent += pct;
+  });
+
+  svg += `<circle cx="${pieCenterX}" cy="${pieCenterY}" r="${holeRadius}" fill="${CONFIG.bg}" />`;
+  svg += `<text x="${pieCenterX}" y="${pieCenterY + 12}" text-anchor="middle" class="font-data total-val">${totalCount}</text>`;
+  svg += `<text x="${pieCenterX}" y="${pieCenterY + 38}" text-anchor="middle" class="total-label">TOTAL USES</text>`;
+
+  // 凡例
+  stats.forEach((item) => {
+    const percentage = Math.round((item.count / totalCount) * 100);
+    svg += `<g>
+      <rect x="${legendX}" y="${currentLegendY}" width="16" height="16" fill="${item.color}" rx="3" />
+      <text x="${legendX + 28}" y="${currentLegendY + 14}" class="font-bungee legend-name">${item.name.toUpperCase()}</text>
+      <text x="${legendX + 165}" y="${currentLegendY + 14}" text-anchor="end" class="font-data percent-val">${percentage}%</text>
+    </g>`;
+    currentLegendY += legendItemHeight;
+  });
+
   svg += `</svg>`;
   fs.writeFileSync(OUTPUT_FILE, svg);
+  process.stdout.write("successfully generated svg image");
 }
 
 generate();
