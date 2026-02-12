@@ -29,6 +29,13 @@
     "url": "https://github.com/mizunoryuki/github-auth"
   },
   {
+    "repoName": "github-weekly-log",
+    "frameworks": [
+      "astro"
+    ],
+    "url": "https://github.com/mizunoryuki/github-weekly-log"
+  },
+  {
     "repoName": "hxh-title-image-generator",
     "frameworks": [
       "react"

@@ -23,87 +23,104 @@
   <text x="700" y="420" class="author">MIZUNORYUKI</text>
 <g class="tooltip">
   <title>react: 16</title>
-  <text x="30" y="175.5" class="label">REACT</text>
-  <rect x="120" y="156.5" width="180" height="23" fill="#30363d" rx="4" />
-  <rect x="120" y="156.5" width="180" height="23" fill="#61DAFB" rx="4">
+  <text x="30" y="155" class="label">REACT</text>
+  <rect x="120" y="136" width="180" height="23" fill="#30363d" rx="4" />
+  <rect x="120" y="136" width="180" height="23" fill="#61DAFB" rx="4">
     <animate attributeName="width" from="0" to="180" dur="0.8s" fill="freeze" />
   </rect>
-  <text x="312" y="175.5" class="font-data count-badge">16</text>
+  <text x="312" y="155" class="font-data count-badge">16</text>
   </g><g class="tooltip">
   <title>next: 5</title>
-  <text x="30" y="216.5" class="label">NEXT</text>
-  <rect x="120" y="197.5" width="180" height="23" fill="#30363d" rx="4" />
-  <rect x="120" y="197.5" width="56.25" height="23" fill="#ffffff" rx="4">
+  <text x="30" y="196" class="label">NEXT</text>
+  <rect x="120" y="177" width="180" height="23" fill="#30363d" rx="4" />
+  <rect x="120" y="177" width="56.25" height="23" fill="#ffffff" rx="4">
     <animate attributeName="width" from="0" to="56.25" dur="0.8s" fill="freeze" />
   </rect>
-  <text x="312" y="216.5" class="font-data count-badge">5</text>
+  <text x="312" y="196" class="font-data count-badge">5</text>
   </g><g class="tooltip">
   <title>hono: 3</title>
-  <text x="30" y="257.5" class="label">HONO</text>
-  <rect x="120" y="238.5" width="180" height="23" fill="#30363d" rx="4" />
-  <rect x="120" y="238.5" width="33.75" height="23" fill="#E36002" rx="4">
+  <text x="30" y="237" class="label">HONO</text>
+  <rect x="120" y="218" width="180" height="23" fill="#30363d" rx="4" />
+  <rect x="120" y="218" width="33.75" height="23" fill="#E36002" rx="4">
     <animate attributeName="width" from="0" to="33.75" dur="0.8s" fill="freeze" />
   </rect>
-  <text x="312" y="257.5" class="font-data count-badge">3</text>
+  <text x="312" y="237" class="font-data count-badge">3</text>
   </g><g class="tooltip">
   <title>vue: 2</title>
-  <text x="30" y="298.5" class="label">VUE</text>
-  <rect x="120" y="279.5" width="180" height="23" fill="#30363d" rx="4" />
-  <rect x="120" y="279.5" width="22.5" height="23" fill="#4FC08D" rx="4">
+  <text x="30" y="278" class="label">VUE</text>
+  <rect x="120" y="259" width="180" height="23" fill="#30363d" rx="4" />
+  <rect x="120" y="259" width="22.5" height="23" fill="#4FC08D" rx="4">
     <animate attributeName="width" from="0" to="22.5" dur="0.8s" fill="freeze" />
   </rect>
-  <text x="312" y="298.5" class="font-data count-badge">2</text>
+  <text x="312" y="278" class="font-data count-badge">2</text>
   </g><g class="tooltip">
-  <title>nitro: 1</title>
-  <text x="30" y="339.5" class="label">NITRO</text>
-  <rect x="120" y="320.5" width="180" height="23" fill="#30363d" rx="4" />
-  <rect x="120" y="320.5" width="11.25" height="23" fill="#F4D03F" rx="4">
+  <title>astro: 1</title>
+  <text x="30" y="319" class="label">ASTRO</text>
+  <rect x="120" y="300" width="180" height="23" fill="#30363d" rx="4" />
+  <rect x="120" y="300" width="11.25" height="23" fill="#BC52EE" rx="4">
     <animate attributeName="width" from="0" to="11.25" dur="0.8s" fill="freeze" />
   </rect>
-  <text x="312" y="339.5" class="font-data count-badge">1</text>
+  <text x="312" y="319" class="font-data count-badge">1</text>
+  </g><g class="tooltip">
+  <title>nitro: 1</title>
+  <text x="30" y="360" class="label">NITRO</text>
+  <rect x="120" y="341" width="180" height="23" fill="#30363d" rx="4" />
+  <rect x="120" y="341" width="11.25" height="23" fill="#F4D03F" rx="4">
+    <animate attributeName="width" from="0" to="11.25" dur="0.8s" fill="freeze" />
+  </rect>
+  <text x="312" y="360" class="font-data count-badge">1</text>
   </g><g class="tooltip">
       <circle cx="480" cy="250" r="82.5" fill="transparent" stroke="#61DAFB" stroke-width="35" stroke-dasharray="0 518.3627878423158" stroke-linecap="butt" transform="rotate(-90 480 250)">
-        <animate attributeName="stroke-dasharray" from="0 518.3627878423158" to="305.17794835100193 518.3627878423158" dur="0.8s" fill="freeze" />
+        <animate attributeName="stroke-dasharray" from="0 518.3627878423158" to="294.20730733846614 518.3627878423158" dur="0.8s" fill="freeze" />
         <animate attributeName="stroke-dashoffset" from="0" to="0" dur="0.8s" fill="freeze" />
       </circle>
     </g><g class="tooltip">
       <circle cx="480" cy="250" r="82.5" fill="transparent" stroke="#ffffff" stroke-width="35" stroke-dasharray="0 518.3627878423158" stroke-linecap="butt" transform="rotate(-90 480 250)">
-        <animate attributeName="stroke-dasharray" from="0 518.3627878423158" to="93.9931088596881 518.3627878423158" dur="0.8s" fill="freeze" />
-        <animate attributeName="stroke-dashoffset" from="0" to="-307.17794835100193" dur="0.8s" fill="freeze" />
+        <animate attributeName="stroke-dasharray" from="0 518.3627878423158" to="90.56478354327068 518.3627878423158" dur="0.8s" fill="freeze" />
+        <animate attributeName="stroke-dashoffset" from="0" to="-296.20730733846614" dur="0.8s" fill="freeze" />
       </circle>
     </g><g class="tooltip">
       <circle cx="480" cy="250" r="82.5" fill="transparent" stroke="#E36002" stroke-width="35" stroke-dasharray="0 518.3627878423158" stroke-linecap="butt" transform="rotate(-90 480 250)">
-        <animate attributeName="stroke-dasharray" from="0 518.3627878423158" to="55.595865315812866 518.3627878423158" dur="0.8s" fill="freeze" />
-        <animate attributeName="stroke-dashoffset" from="0" to="-403.17105721069004" dur="0.8s" fill="freeze" />
+        <animate attributeName="stroke-dasharray" from="0 518.3627878423158" to="53.538870125962404 518.3627878423158" dur="0.8s" fill="freeze" />
+        <animate attributeName="stroke-dashoffset" from="0" to="-388.77209088173686" dur="0.8s" fill="freeze" />
       </circle>
     </g><g class="tooltip">
       <circle cx="480" cy="250" r="82.5" fill="transparent" stroke="#4FC08D" stroke-width="35" stroke-dasharray="0 518.3627878423158" stroke-linecap="butt" transform="rotate(-90 480 250)">
-        <animate attributeName="stroke-dasharray" from="0 518.3627878423158" to="36.39724354387524 518.3627878423158" dur="0.8s" fill="freeze" />
-        <animate attributeName="stroke-dashoffset" from="0" to="-460.7669225265029" dur="0.8s" fill="freeze" />
+        <animate attributeName="stroke-dasharray" from="0 518.3627878423158" to="35.02591341730827 518.3627878423158" dur="0.8s" fill="freeze" />
+        <animate attributeName="stroke-dashoffset" from="0" to="-444.31096100769923" dur="0.8s" fill="freeze" />
+      </circle>
+    </g><g class="tooltip">
+      <circle cx="480" cy="250" r="82.5" fill="transparent" stroke="#BC52EE" stroke-width="35" stroke-dasharray="0 518.3627878423158" stroke-linecap="butt" transform="rotate(-90 480 250)">
+        <animate attributeName="stroke-dasharray" from="0 518.3627878423158" to="16.512956708654134 518.3627878423158" dur="0.8s" fill="freeze" />
+        <animate attributeName="stroke-dashoffset" from="0" to="-481.3368744250075" dur="0.8s" fill="freeze" />
       </circle>
     </g><g class="tooltip">
       <circle cx="480" cy="250" r="82.5" fill="transparent" stroke="#F4D03F" stroke-width="35" stroke-dasharray="0 518.3627878423158" stroke-linecap="butt" transform="rotate(-90 480 250)">
-        <animate attributeName="stroke-dasharray" from="0 518.3627878423158" to="17.19862177193762 518.3627878423158" dur="0.8s" fill="freeze" />
-        <animate attributeName="stroke-dashoffset" from="0" to="-499.16416607037814" dur="0.8s" fill="freeze" />
+        <animate attributeName="stroke-dasharray" from="0 518.3627878423158" to="16.512956708654134 518.3627878423158" dur="0.8s" fill="freeze" />
+        <animate attributeName="stroke-dashoffset" from="0" to="-499.8498311336616" dur="0.8s" fill="freeze" />
       </circle>
-    </g><circle cx="480" cy="250" r="65" fill="#0d1117" /><text x="480" y="262" text-anchor="middle" class="font-data total-val">27</text><text x="480" y="288" text-anchor="middle" class="total-label">TOTAL USES</text><g>
-      <rect x="600" y="170" width="16" height="16" fill="#61DAFB" rx="3" />
-      <text x="628" y="184" class="legend-name">REACT</text>
-      <text x="765" y="184" text-anchor="end" class="font-data percent-val">59%</text>
+    </g><circle cx="480" cy="250" r="65" fill="#0d1117" /><text x="480" y="262" text-anchor="middle" class="font-data total-val">28</text><text x="480" y="288" text-anchor="middle" class="total-label">TOTAL USES</text><g>
+      <rect x="600" y="154" width="16" height="16" fill="#61DAFB" rx="3" />
+      <text x="628" y="168" class="legend-name">REACT</text>
+      <text x="765" y="168" text-anchor="end" class="font-data percent-val">57%</text>
     </g><g>
-      <rect x="600" y="202" width="16" height="16" fill="#ffffff" rx="3" />
-      <text x="628" y="216" class="legend-name">NEXT</text>
-      <text x="765" y="216" text-anchor="end" class="font-data percent-val">19%</text>
+      <rect x="600" y="186" width="16" height="16" fill="#ffffff" rx="3" />
+      <text x="628" y="200" class="legend-name">NEXT</text>
+      <text x="765" y="200" text-anchor="end" class="font-data percent-val">18%</text>
     </g><g>
-      <rect x="600" y="234" width="16" height="16" fill="#E36002" rx="3" />
-      <text x="628" y="248" class="legend-name">HONO</text>
-      <text x="765" y="248" text-anchor="end" class="font-data percent-val">11%</text>
+      <rect x="600" y="218" width="16" height="16" fill="#E36002" rx="3" />
+      <text x="628" y="232" class="legend-name">HONO</text>
+      <text x="765" y="232" text-anchor="end" class="font-data percent-val">11%</text>
     </g><g>
-      <rect x="600" y="266" width="16" height="16" fill="#4FC08D" rx="3" />
-      <text x="628" y="280" class="legend-name">VUE</text>
-      <text x="765" y="280" text-anchor="end" class="font-data percent-val">7%</text>
+      <rect x="600" y="250" width="16" height="16" fill="#4FC08D" rx="3" />
+      <text x="628" y="264" class="legend-name">VUE</text>
+      <text x="765" y="264" text-anchor="end" class="font-data percent-val">7%</text>
     </g><g>
-      <rect x="600" y="298" width="16" height="16" fill="#F4D03F" rx="3" />
-      <text x="628" y="312" class="legend-name">NITRO</text>
-      <text x="765" y="312" text-anchor="end" class="font-data percent-val">4%</text>
+      <rect x="600" y="282" width="16" height="16" fill="#BC52EE" rx="3" />
+      <text x="628" y="296" class="legend-name">ASTRO</text>
+      <text x="765" y="296" text-anchor="end" class="font-data percent-val">4%</text>
+    </g><g>
+      <rect x="600" y="314" width="16" height="16" fill="#F4D03F" rx="3" />
+      <text x="628" y="328" class="legend-name">NITRO</text>
+      <text x="765" y="328" text-anchor="end" class="font-data percent-val">4%</text>
     </g></svg>
