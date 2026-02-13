@@ -22,18 +22,30 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run Scan and Generate
+      - name: Run Scan
         env:
           GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
           GITHUB_USERNAME: ${{ github.repository_owner }}
+        run: npx tsx scan.ts
+
+      - name: Check result.json changes
+        id: result_diff
         run: |
-          npx tsx scan.ts
-          npx tsx generate.ts
+          if git diff --quiet -- result.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Generate image
+        if: steps.result_diff.outputs.changed == 'true'
+        run: npx tsx generate.ts
 
       - name: Commit and Push
+        if: steps.result_diff.outputs.changed == 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add stats-chart.svg result.json scan.log
+          git add stats-chart.svg result.json
           git commit -m "docs: update stats chart [skip ci]" || echo "No changes to commit"
           git push
