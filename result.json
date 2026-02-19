@@ -65,6 +65,13 @@
     "url": "https://github.com/mizunoryuki/login-with-mail"
   },
   {
+    "repoName": "markdown-editor",
+    "frameworks": [
+      "vue"
+    ],
+    "url": "https://github.com/mizunoryuki/markdown-editor"
+  },
+  {
     "repoName": "messageBoard",
     "frameworks": [
       "react"
@@ -163,12 +170,5 @@
       "react"
     ],
     "url": "https://github.com/mizunoryuki/type-game"
-  },
-  {
-    "repoName": "vue-todo",
-    "frameworks": [
-      "vue"
-    ],
-    "url": "https://github.com/mizunoryuki/vue-todo"
   }
 ]
