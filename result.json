@@ -170,5 +170,12 @@
       "react"
     ],
     "url": "https://github.com/mizunoryuki/type-game"
+  },
+  {
+    "repoName": "vue-todo",
+    "frameworks": [
+      "vue"
+    ],
+    "url": "https://github.com/mizunoryuki/vue-todo"
   }
 ]
