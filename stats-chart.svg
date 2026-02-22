@@ -38,13 +38,13 @@
   </rect>
   <text x="312" y="196" class="font-data count-badge">5</text>
   </g><g class="tooltip">
-  <title>hono: 3</title>
+  <title>hono: 4</title>
   <text x="30" y="237" class="label">HONO</text>
   <rect x="120" y="218" width="180" height="23" fill="#30363d" rx="4" />
-  <rect x="120" y="218" width="33.75" height="23" fill="#E36002" rx="4">
-    <animate attributeName="width" from="0" to="33.75" dur="0.8s" fill="freeze" />
+  <rect x="120" y="218" width="45" height="23" fill="#E36002" rx="4">
+    <animate attributeName="width" from="0" to="45" dur="0.8s" fill="freeze" />
   </rect>
-  <text x="312" y="237" class="font-data count-badge">3</text>
+  <text x="312" y="237" class="font-data count-badge">4</text>
   </g><g class="tooltip">
   <title>vue: 3</title>
   <text x="30" y="278" class="label">VUE</text>
@@ -71,38 +71,38 @@
   <text x="312" y="360" class="font-data count-badge">1</text>
   </g><g class="tooltip">
       <circle cx="480" cy="250" r="82.5" fill="transparent" stroke="#61DAFB" stroke-width="35" stroke-dasharray="0 518.3627878423158" stroke-linecap="butt" transform="rotate(-90 480 250)">
-        <animate attributeName="stroke-dasharray" from="0 518.3627878423158" to="283.99326225782943 518.3627878423158" dur="0.8s" fill="freeze" />
+        <animate attributeName="stroke-dasharray" from="0 518.3627878423158" to="274.46015351590177 518.3627878423158" dur="0.8s" fill="freeze" />
         <animate attributeName="stroke-dashoffset" from="0" to="0" dur="0.8s" fill="freeze" />
       </circle>
     </g><g class="tooltip">
       <circle cx="480" cy="250" r="82.5" fill="transparent" stroke="#ffffff" stroke-width="35" stroke-dasharray="0 518.3627878423158" stroke-linecap="butt" transform="rotate(-90 480 250)">
-        <animate attributeName="stroke-dasharray" from="0 518.3627878423158" to="87.3728944555717 518.3627878423158" dur="0.8s" fill="freeze" />
-        <animate attributeName="stroke-dashoffset" from="0" to="-285.99326225782943" dur="0.8s" fill="freeze" />
+        <animate attributeName="stroke-dasharray" from="0 518.3627878423158" to="84.3937979737193 518.3627878423158" dur="0.8s" fill="freeze" />
+        <animate attributeName="stroke-dashoffset" from="0" to="-276.46015351590177" dur="0.8s" fill="freeze" />
       </circle>
     </g><g class="tooltip">
       <circle cx="480" cy="250" r="82.5" fill="transparent" stroke="#E36002" stroke-width="35" stroke-dasharray="0 518.3627878423158" stroke-linecap="butt" transform="rotate(-90 480 250)">
-        <animate attributeName="stroke-dasharray" from="0 518.3627878423158" to="51.62373667334301 518.3627878423158" dur="0.8s" fill="freeze" />
-        <animate attributeName="stroke-dashoffset" from="0" to="-375.3661567134011" dur="0.8s" fill="freeze" />
+        <animate attributeName="stroke-dasharray" from="0 518.3627878423158" to="67.11503837897544 518.3627878423158" dur="0.8s" fill="freeze" />
+        <animate attributeName="stroke-dashoffset" from="0" to="-362.85395148962107" dur="0.8s" fill="freeze" />
       </circle>
     </g><g class="tooltip">
       <circle cx="480" cy="250" r="82.5" fill="transparent" stroke="#4FC08D" stroke-width="35" stroke-dasharray="0 518.3627878423158" stroke-linecap="butt" transform="rotate(-90 480 250)">
-        <animate attributeName="stroke-dasharray" from="0 518.3627878423158" to="51.62373667334301 518.3627878423158" dur="0.8s" fill="freeze" />
-        <animate attributeName="stroke-dashoffset" from="0" to="-428.9898933867441" dur="0.8s" fill="freeze" />
+        <animate attributeName="stroke-dasharray" from="0 518.3627878423158" to="49.83627878423158 518.3627878423158" dur="0.8s" fill="freeze" />
+        <animate attributeName="stroke-dashoffset" from="0" to="-431.96898986859645" dur="0.8s" fill="freeze" />
       </circle>
     </g><g class="tooltip">
       <circle cx="480" cy="250" r="82.5" fill="transparent" stroke="#BC52EE" stroke-width="35" stroke-dasharray="0 518.3627878423158" stroke-linecap="butt" transform="rotate(-90 480 250)">
-        <animate attributeName="stroke-dasharray" from="0 518.3627878423158" to="15.87457889111434 518.3627878423158" dur="0.8s" fill="freeze" />
-        <animate attributeName="stroke-dashoffset" from="0" to="-482.61363006008713" dur="0.8s" fill="freeze" />
+        <animate attributeName="stroke-dasharray" from="0 518.3627878423158" to="15.27875959474386 518.3627878423158" dur="0.8s" fill="freeze" />
+        <animate attributeName="stroke-dashoffset" from="0" to="-483.80526865282803" dur="0.8s" fill="freeze" />
       </circle>
     </g><g class="tooltip">
       <circle cx="480" cy="250" r="82.5" fill="transparent" stroke="#F4D03F" stroke-width="35" stroke-dasharray="0 518.3627878423158" stroke-linecap="butt" transform="rotate(-90 480 250)">
-        <animate attributeName="stroke-dasharray" from="0 518.3627878423158" to="15.87457889111434 518.3627878423158" dur="0.8s" fill="freeze" />
-        <animate attributeName="stroke-dashoffset" from="0" to="-500.48820895120144" dur="0.8s" fill="freeze" />
+        <animate attributeName="stroke-dasharray" from="0 518.3627878423158" to="15.27875959474386 518.3627878423158" dur="0.8s" fill="freeze" />
+        <animate attributeName="stroke-dashoffset" from="0" to="-501.0840282475719" dur="0.8s" fill="freeze" />
       </circle>
-    </g><circle cx="480" cy="250" r="65" fill="#0d1117" /><text x="480" y="262" text-anchor="middle" class="font-data total-val">29</text><text x="480" y="288" text-anchor="middle" class="total-label">TOTAL USES</text><g>
+    </g><circle cx="480" cy="250" r="65" fill="#0d1117" /><text x="480" y="262" text-anchor="middle" class="font-data total-val">30</text><text x="480" y="288" text-anchor="middle" class="total-label">TOTAL USES</text><g>
       <rect x="600" y="154" width="16" height="16" fill="#61DAFB" rx="3" />
       <text x="628" y="168" class="legend-name">REACT</text>
-      <text x="765" y="168" text-anchor="end" class="font-data percent-val">55%</text>
+      <text x="765" y="168" text-anchor="end" class="font-data percent-val">53%</text>
     </g><g>
       <rect x="600" y="186" width="16" height="16" fill="#ffffff" rx="3" />
       <text x="628" y="200" class="legend-name">NEXT</text>
@@ -110,7 +110,7 @@
     </g><g>
       <rect x="600" y="218" width="16" height="16" fill="#E36002" rx="3" />
       <text x="628" y="232" class="legend-name">HONO</text>
-      <text x="765" y="232" text-anchor="end" class="font-data percent-val">10%</text>
+      <text x="765" y="232" text-anchor="end" class="font-data percent-val">13%</text>
     </g><g>
       <rect x="600" y="250" width="16" height="16" fill="#4FC08D" rx="3" />
       <text x="628" y="264" class="legend-name">VUE</text>
