@@ -191,5 +191,13 @@
       "vue"
     ],
     "url": "https://github.com/mizunoryuki/vue-todo"
+  },
+  {
+    "repoName": "web-frontend-framework-compass",
+    "frameworks": [
+      "react",
+      "astro"
+    ],
+    "url": "https://github.com/mizunoryuki/web-frontend-framework-compass"
   }
 ]
