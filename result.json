@@ -86,13 +86,6 @@
     "url": "https://github.com/mizunoryuki/messageBoard"
   },
   {
-    "repoName": "mio",
-    "frameworks": [
-      "react"
-    ],
-    "url": "https://github.com/mizunoryuki/mio"
-  },
-  {
     "repoName": "one-phrase-log",
     "frameworks": [
       "react"
