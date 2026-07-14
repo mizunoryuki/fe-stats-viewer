@@ -159,6 +159,7 @@
   {
     "repoName": "TodoWithTest",
     "frameworks": [
+      "hono",
       "react"
     ],
     "url": "https://github.com/mizunoryuki/TodoWithTest"
