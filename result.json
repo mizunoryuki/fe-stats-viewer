@@ -199,5 +199,12 @@
       "astro"
     ],
     "url": "https://github.com/mizunoryuki/web-frontend-framework-compass"
+  },
+  {
+    "repoName": "workers-ai-test",
+    "frameworks": [
+      "hono"
+    ],
+    "url": "https://github.com/mizunoryuki/workers-ai-test"
   }
 ]
