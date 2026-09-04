@@ -65,6 +65,13 @@
     "url": "https://github.com/mizunoryuki/login-with-mail"
   },
   {
+    "repoName": "mahjong",
+    "frameworks": [
+      "react"
+    ],
+    "url": "https://github.com/mizunoryuki/mahjong"
+  },
+  {
     "repoName": "markdown-editor",
     "frameworks": [
       "vue"
